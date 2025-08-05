@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  // Force CSS cache bypass for ArenaFysio deployment
+  generateBuildId: async () => {
+    return `arenafysio-css-fix-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  },
   /* config options here */
 };
 

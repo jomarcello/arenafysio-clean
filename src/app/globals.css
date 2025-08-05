@@ -273,9 +273,16 @@ body {
   }
 }
 
-/* Force CSS rebuild - Railway deployment fix */
+/* Force CSS rebuild - Railway deployment fix - ARENAFYSIO */
 .css-rebuild-force {
-  content: "v2025-08-05-15:30";
+  content: "v2025-08-05-18:15-arenafysio";
+}
+
+/* FORCE BODY STYLING - Railway CSS cache bypass */
+body {
+  background: #f8fafc !important;
+  color: #1e293b !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
 }
 
 /* Additional Railway CSS fix - ensure all styles load */
