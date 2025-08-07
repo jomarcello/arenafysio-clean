@@ -11,10 +11,17 @@ const nextConfig: NextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
-  // Force CSS cache bypass for ArenaFysio deployment
+  // CRITICAL FIX: Force CSS cache bypass for Railway deployment
   generateBuildId: async () => {
-    return `arenafysio-css-fix-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    return `build-${Date.now()}-css-fix`
   },
+  // Force static optimization to include all Tailwind classes
+  experimental: {
+    optimizeCss: true,
+  },
+  // Ensure all CSS is generated for production
+  productionBrowserSourceMaps: false,
+  poweredByHeader: false,
   /* config options here */
 };
 
