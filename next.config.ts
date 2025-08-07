@@ -16,9 +16,7 @@ const nextConfig: NextConfig = {
     return `build-${Date.now()}-css-fix`
   },
   // Force static optimization to include all Tailwind classes
-  experimental: {
-    optimizeCss: true,
-  },
+  // Note: optimizeCss disabled due to critters dependency issue in Railway deployment
   // Ensure all CSS is generated for production
   productionBrowserSourceMaps: false,
   poweredByHeader: false,
